@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrBrainLess</title>
+    <link rel="stylesheet" href="../common.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 36px;
+        }
+        .text {
+            margin: 36px;
+            text-align: justify;
+            line-height: 1.6;
+            width: 50%;
+        }
+        .text p {
+            margin-bottom: 16px;
+        }
+        .text a {
+            color: orange;
+            text-decoration: none;
+        }
+        .text a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 640px) {
+            .text {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../mrbrainless.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="meanings/">Meanings</a>
+        </nav>
+    </header>
+    <div class="container">
+        <canvas width="300" height="300"></canvas>
+        <div class="description">You can play with the above photo. Just tap or drag your finger</div>
+        <div class="text"><p>Welcome to <a href="../index.html">MrBrainLess</a>, your destination for cool and fascinating facts! We are passionate about providing accurate information and knowledge to interested people around the world.</p>
+        <p>At <a href="../index.html">MrBrainLess</a>, our aim is to provide a platform where users can explore a variety of interesting and verified facts. Our mission is to educate, entertain and inspire people by providing credible and engaging content that expands their understanding of the world.</p>
+        <p>We invite you to become part of fact enthusiasts. We also encourage you to share your feedback and suggestions with us as we are committed to making your experience on our website even better.</p>
+        <p>Thank you for choosing [Website Name] as your trusted source for fascinating and verified facts. We hope you enjoy exploring the incredible world of knowledge with us!</p>
+        </div>
+    </div>
+    <footer>
+        <div class="mail">
+            <p><a href="mailto:sagarkumarmodu@gmail.com">sagarkumarmodu@gmail.com</a>
+            </p>
+            <p><a href="mailto:sagarkumarmodu2001@gmail.com">sagarkumarmodu2001@gmail.com</a></p>
+        </div>
+        <div class="copyright">&copy; <span class="year"></span> | Created and Designed by <a href="../index.html">MrBrainLess</a></div>
+    </footer>
+    <script src="../common.js" defer></script>
+    <script src="about.js" defer></script>
+</body>
+</html>
