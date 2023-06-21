@@ -24,7 +24,7 @@ window.addEventListener('resize', function(){
         cvs.width = 600;
         cvs.height = 600;
     }
-    location.reload();
+    // location.reload();
 })
 
 let mainText = "Sagar";
