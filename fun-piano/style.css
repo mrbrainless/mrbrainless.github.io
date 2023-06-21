@@ -25,13 +25,14 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
+    width: 750px;
     height: 350px;
     aspect-ratio: 60/35;
     background: #000;
     color: #fff;
     padding: 20px;
     user-select: none;
+    border-radius: 10px;
 }
 .piano, .top {
     display: flex;
@@ -54,11 +55,11 @@ body {
     position: relative;
 }
 .piano .black {
-    width: 8%;
+    width: 6%;
     height: 50%;
     background: linear-gradient(#333, #000);
-    margin-left: -4%;
-    margin-right: -4%;
+    margin-left: -3%;
+    margin-right: -3%;
     border-radius: 0 0 6px 6px;
     z-index: 100;
     color: #fff;
@@ -143,6 +144,7 @@ body {
 
 .piano .white:active, .piano .activeWhite {
     background: #ddd;
+    border: solid #000 2px;
 }
 .piano .black:active, .piano .activeBlack {
     background: #333;
