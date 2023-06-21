@@ -8,7 +8,7 @@ window.addEventListener('dblclick', () => {
     document.documentElement.requestFullscreen();
 })
 for(let i=0; i<keys.length; i++){
-    keys[i].addEventListener('mousedown', function(){
+    keys[i].addEventListener('click', function(){
         if(funny.checked){
             const audio = document.getElementById(i);
             audio.currentTime = 0;
