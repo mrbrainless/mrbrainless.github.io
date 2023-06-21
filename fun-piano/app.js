@@ -8,6 +8,11 @@ window.addEventListener('dblclick', () => {
     document.documentElement.requestFullscreen();
 })
 for(let i=0; i<keys.length; i++){
+    if(window.innerWidth<840){
+        keys[i].addEventListener('mouseover', () => {
+            keys[i].click();
+        })
+    }
     keys[i].addEventListener('click', function(){
         if(funny.checked){
             const audio = document.getElementById(i);
