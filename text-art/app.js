@@ -138,10 +138,3 @@ function downloadImg(){
     imageFunc();
     downloadImage();
 }
-
-
-
-
- 
-  
-
