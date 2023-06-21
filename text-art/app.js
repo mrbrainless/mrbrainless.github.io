@@ -125,13 +125,10 @@ function downloadHDImg(){
     cvs.height = 1080;
     imageFunc();
     downloadImage();
-    cvs.width = cvsWidth;
-    cvs.height = cvsHeight;
-    imageFunc();
 }
 function downloadImage(){
     const link = document.createElement('a');
-    link.download = `${mainText}.png`;
+    link.download = `${mainText}`;
     link.href = cvs.toDataURL('image/png');
     link.click();
 }
@@ -140,9 +137,6 @@ function downloadImg(){
     cvs.height = 600;
     imageFunc();
     downloadImage();
-    cvs.width = cvsWidth;
-    cvs.height = cvsHeight;
-    imageFunc();
 }
 
 
