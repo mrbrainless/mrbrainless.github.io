@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <canvas width="600" height="600"></canvas> -->
+    <input type="file" accept="image/png, image/jpeg" onchange="encodeImageFileAsURL(this)" id="file-picker" />
+    <div class="top">Enter your name without spaces in Pascal case. eg:- "SagarKumar" and choose an image</div>
+    <div class="container">
+        <input type="text" placeholder="Enter your name" id="name" autofocus>
+        <!-- <input type="range" min="4" max="12" id="range" /> -->
+        <label for="range">Select font size</label>
+        <select name="range" id="range">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8" selected>8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+        </select>
+        <div class="input">Choose Image File</div>
+        <div onclick="downloadImg()" class="download">Download</div>
+        <div onclick="downloadHDImg()" class="download high">Download (1080)</div>
+    </div>
+    <div class="text">
+        Choose an image or try one of these
+    </div>
+    <div class="photos">
+        <img src="images/1.png" alt="">
+        <img src="images/2.svg" alt="">
+        <img src="images/3.png" alt="">
+        <img src="images/4.png" alt="">
+    </div>
+    <canvas width="600" height="600"></canvas>
+<script src="app.js"></script>    
+</body>
+</html>
