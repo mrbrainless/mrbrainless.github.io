@@ -142,13 +142,11 @@ body {
     }
 }
 
-.piano .white:active, .piano .activeWhite {
+.piano .white:active, .piano .activeWhite, .piano .white:hover {
     background: #ddd;
     border: solid #000 2px;
 }
-.piano .black:active, .piano .activeBlack {
+.piano .black:active, .piano .activeBlack, .piano .black:hover {
     background: #333;
 }
-.dblscreen {
-    display: none;
-}
+
