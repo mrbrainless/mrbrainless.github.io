@@ -5,7 +5,7 @@ const ctx = cvs.getContext('2d', {
 const mouse = {
     x: undefined,
     y: undefined,
-    radius: 1000
+    radius: 2000
 }
 cvs.addEventListener('mousemove', (e) => {
     
