@@ -2,6 +2,13 @@ const cvs = document.querySelector('canvas');
 const ctx = cvs.getContext('2d', {
     willReadFrequently: true
 });
+cvs.onwheel = function(event){
+    event.preventDefault();
+};
+
+cvs.onmousewheel = function(event){
+    event.preventDefault();
+}
 const mouse = {
     x: undefined,
     y: undefined,
