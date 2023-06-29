@@ -93,7 +93,7 @@ function animate(){
 }
 cvs.addEventListener('touchmove', (e) => {
     e.preventDefault();
-    mouse.x = e.targetTouches[0].clientX-e.targetTouches[0].radiusX;
+    mouse.x = e.targetTouches[0].clientX-e.targetTouches[0].radiusX*8;
     mouse.y = e.targetTouches[0].clientY-cvs.height/2;
     setTimeout(function(){
         mouse.x = undefined;
