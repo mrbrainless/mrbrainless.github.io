@@ -2,13 +2,6 @@ const cvs = document.querySelector('canvas');
 const ctx = cvs.getContext('2d', {
     willReadFrequently: true
 });
-cvs.onwheel = function(event){
-    event.preventDefault();
-};
-
-cvs.onmousewheel = function(event){
-    event.preventDefault();
-}
 const mouse = {
     x: undefined,
     y: undefined,
@@ -99,6 +92,7 @@ function animate(){
     requestAnimationFrame(animate);
 }
 cvs.addEventListener('touchmove', (e) => {
+    e.preventDefault();
     mouse.x = e.targetTouches[0].clientX-e.targetTouches[0].radiusX * 4;
     mouse.y = e.targetTouches[0].clientY-cvs.height/2;
     setTimeout(function(){
