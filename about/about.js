@@ -2,6 +2,7 @@ const cvs = document.querySelector('canvas');
 const ctx = cvs.getContext('2d', {
     willReadFrequently: true
 });
+cvs.width = window.innerWidth;
 const mouse = {
     x: undefined,
     y: undefined,
@@ -64,7 +65,7 @@ const image = new Image();
 image.src = "images/kick-buttowski.png";
 function scan(){
     image.addEventListener('load', () => {
-        ctx.drawImage(image, 0, 0 , 300, 300);
+        ctx.drawImage(image, cvs.width/2-150, 0 , 300, 300);
         const pixels = ctx.getImageData(0, 0, cvs.width, cvs.height).data;
         for(let y=0; y<cvs.height;y+=gap){
             for(let x=0; x<cvs.width;x+=gap){
