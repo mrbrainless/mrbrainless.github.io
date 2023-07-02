@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Text Art</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <div id="container">
+            <div class="text">
+                <p style="text-align: center; font-family: Arial;color:#fff;font-size: 16px;margin-top: 18px;padding: 8px;">Enter your name in UPPERCASE or  PascalCase eg:- SagarKumar for best results</p>
+                <input type="text" id="name" onchange="textInput(this)" placeholder="Your name please!" autofocus>
+                <label for="fontSize" style="color:#fff">Select font-size</label>
+                <select name="fontSize" id="fontSize" style="color: #000" onchange="fontSize(this)">
+                    <option value="10" selected>10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                </select>
+            </div>
+            <div class="image">
+                <input type="file" accept="image/*" onchange="readImage(this)">
+                <div class="uploadImage">Upload Image</div>
+            </div>
+        </div>
+        <div id="image-container">
+            <p style="text-align: center; font-family: cursive;color:#fff;font-size: 24px;">Upload image or choose one of these</p>
+            <div>
+                <img src="images/1.png" alt="">
+                <img src="images/2.svg" alt="">
+                <img src="images/3.png" alt="">
+                <img src="images/4.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="downloadImageContainer">
+        <div class="download">Download</div>
+        <div class="download">Download (1080)</div>
+    </div>
+    <div class="canvasContainer">
+        <canvas width="600" height="600"></canvas>
+    </div>
+    <div class="report">
+        <p>Mail me if you have any suggestions.</p>
+        <p><a href="mailto:sagarkumarmodu2001@gmail.com">sagarkumarmodu2001@gmail.com</a></p>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
