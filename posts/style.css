@@ -1,0 +1,186 @@
+main {
+    width: 75%;
+    margin: 36px auto;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 60%;
+    margin: 0 18px;
+}
+.container img {
+    width: 100%;
+    height: auto;
+}
+h1 {
+    font-size: 38px;
+    font-family: GeoEditBold,Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Helvetica,Arial,sans-serif;
+    margin: 36px 0;
+}
+.classification {
+    width: 100%;
+    padding: 16px 24px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0.5px 1px 1px, rgba(9, 30, 66, 0.13) -0.5px 0px 1px 1px;
+    margin-bottom: 32px;
+}
+.classification .taxa {
+    width: 100%;
+    line-height: 2;
+}
+.classification .taxa span {
+    display: inline-block;
+    width: 40%;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: GeoBrandBold,CenturyGothic,AppleGothic,Gill Sans,Gill Sans MT,sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+.classification .taxa a {
+    border-bottom: solid 2px #fc0;
+    font-size: 17px;
+    color: #444;
+    text-decoration: none;
+    font-family: "Trebuchet MS", GeoBrandBold,CenturyGothic,AppleGothic,Gill Sans,Gill Sans MT,sans-serif;
+    cursor: pointer;
+}
+.meaning {
+    border-bottom: solid 2px #fc0;
+    text-decoration: none;
+    color: #444;
+}
+.classification .taxa a:hover, .meaning:hover {
+    color: #fc0;
+}
+article p, ul li {
+    line-height: 1.6;
+    margin-bottom: 16px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+    font-size: 17px;
+}
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 24px 0 8px 0;
+    font-size: 26px;
+}
+.image-container picture img {
+    width: 100%;
+    height: auto;
+}
+aside {
+    width: 30%;
+    margin: 54px 18px;
+}
+.fun-projects, .fun-projects a{
+    width: 100%;
+}
+.fun-projects a {
+    display: inline-block;
+    margin-bottom: 18px;
+}
+.fun-projects img {
+    width: 100%;
+    border: solid 1px #000;
+}
+.attribution {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 6px 0;
+}
+.attribution a {
+    color: #444;
+    text-decoration: none;
+    border-bottom: solid 2px blue;
+}
+.attribution a:hover {
+    color: blue;
+}
+
+.asideText {
+    display: block;
+    color: #111; 
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 18px;
+    position: relative;
+    background: #ddd;
+    font-weight: 600;
+    width: 100%;
+    padding: 4px 2px;
+}
+.asideText::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: green;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.related-articles div {
+    margin-bottom: 16px;
+}
+.related-articles a {
+    text-decoration: none;
+    color: #444;
+}
+.related-articles a:hover {
+    text-decoration: underline;
+}
+.pointer {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 6px;
+}
+.fun-projects img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 920px) {
+    main {
+        width: 98%;
+    }
+}
+@media (max-width: 720px) {
+    main {
+        width: 94%;
+        flex-direction: column;
+    }
+    .container{
+        width: 100%;
+        margin: 0;
+    }
+    .ads {
+        display: none;
+    }
+    aside {
+        width: 96%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    .related-articles, .fun-projects {
+        width: 50%;
+        margin: 8px;
+    }
+    h1 {
+        font-size: 28px;
+        text-align: justify;
+        margin: 12px 0;
+    }
+}
+@media (max-width: 520px) {
+    aside {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .related-articles, .fun-projects {
+        width: 100%;
+        margin: auto;
+    }
+}

@@ -1,0 +1,234 @@
+main {
+    width: 75%;
+    margin: auto;
+}
+.mainContent {
+    display: flex;
+    justify-content: center;
+}
+.content {
+    width: 60%;
+}
+.fact {
+    width: 100%;
+    padding: 16px;
+    margin: 32px 0;
+    border-bottom: solid 5px rgba(0,0,0,0.3);
+    word-wrap: break-word;
+}
+.fact:last-child {
+    border: none;
+}
+.fact img {
+    width: 100%;
+    border-radius: 4px;
+    height: auto;
+}
+.fact p, ul {
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+    margin: 18px 0;
+}
+aside {
+    width: 30%;
+    margin: 75px 16px;
+}
+.fact h2, .fact h2 strong {
+    font-family:Kelson,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #333;
+}
+.fact .attribution {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 4px 0;
+}
+.fact .attribution a {
+    color: #444;
+    text-decoration: none;
+    border-bottom: solid 2px blue;
+}
+.fact .attribution a:hover {
+    color: blue;
+}
+.know-more {
+    display: inline-block;
+    background: #fc0;
+    padding: 4px 8px;
+    cursor: pointer;
+    color: #000;
+}
+.fact h2 {
+    font-family:Kelson,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.4;
+}
+.tag {
+    display: inline-block;
+    background: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    color: #000;
+    border: solid 2px #aaa;
+    margin-bottom: 6px;
+}
+
+.fun-projects, .fun-projects a {
+    width: 100%;
+}
+.fun-projects a {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+.fun-projects img {
+    width: 100%;
+    border: solid 1px #000;
+    height: auto;
+}
+.pagination {
+    width: 120px;
+    justify-content: space-between;
+    margin: 16px auto;
+    display: flex;
+}
+.pagination div {
+    width: 50px;
+    height: 50px;
+    /* background: #ddd; */
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+.pagination div::before, .pagination div::after {
+    content: '';
+    width: 20px;
+    height: 6px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 2px;
+}
+.pagination .left::before {
+    transform-origin: 15% 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.pagination .left::after {
+    transform-origin: 15% 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.pagination .right::before {
+    transform-origin: 85% 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.pagination .right::after {
+    transform-origin: 85% 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.pagination div:hover {
+    background: #ddd;
+}
+.pagination .disabled, .pagination .disabled:hover {
+    cursor: no-drop;
+    background: transparent;
+}
+.pagination .disabled::before, .pagination .disabled::after {
+    background: #ddd;
+}
+
+@media (max-width: 920px) {
+    main, .mainContent {
+        width: 98%;
+    }
+}
+@media (max-width: 720px) {
+    main, .mainContent {
+        width: 96%;
+        flex-direction: column;
+        margin: auto;
+    }
+    .content {
+        width: 100%;
+        margin: 0;
+    }
+    aside {
+        width: 96%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    .related-articles, .fun-projects {
+        width: 50%;
+        margin: 8px;
+    }
+    .ads {
+        display: none;
+    }
+    .fact {
+        padding: 12px 0;
+    }
+    .fact h2 {
+        font-size: 26px;
+        letter-spacing: 1px;
+        text-align: justify;
+    }
+    .fact h2 strong {
+        font-size: 30px;
+        line-height: 1.6;
+    }
+}
+@media (max-width: 540px) {
+    aside {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .related-articles, .fun-projects {
+        width: 100%;
+        margin: auto;
+    }
+}
+.asideText {
+    display: block;
+    color: #111; 
+    text-align: center;
+    margin: 16px 0;
+    font-size: 18px;
+    position: relative;
+    background: #ddd;
+    font-weight: 600;
+    width: 100%;
+    padding: 4px 2px;
+}
+.asideText::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: green;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.related-articles div {
+    margin-bottom: 16px;
+}
+.related-articles a {
+    text-decoration: none;
+    color: #444;
+}
+.related-articles a:hover {
+    text-decoration: underline;
+}
+.pointer {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 6px;
+}

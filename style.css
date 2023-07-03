@@ -1,0 +1,83 @@
+@font-face {
+    font-family: text;
+    src: url(fonts/SenjaSantuy.otf);
+}
+main {
+    display: flex;
+}
+.container {
+    width: 50%;
+    margin: auto;
+}
+.fun-projects, .articles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: solid #fc0 2px;
+    padding-bottom: 30px;
+}
+.articles {
+    border: none;
+}
+.container a {
+    width: 45%;
+    margin: 16px 0;
+}
+.container img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
+    border: solid 1px #000;
+}
+.container .articles img {
+    object-fit: cover;
+}
+.articles a {
+    position: relative;
+}
+.articles a span {
+    display: inline-block;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+    padding: 4px 8px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+h2 {
+    text-align: center;
+    margin: 24px 0;
+}
+@media (max-width: 920px) {
+    .container {
+        width: 80%;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        width: 75%;
+    }
+    .container a {
+        width: 100%;
+    }
+}
+@media (max-width: 400px) {
+    .container {
+        width: 85%;
+    }
+    .container a {
+        width: 100%;
+    }
+}
+.text {
+    text-align: center;
+    margin: 24px;
+    font-size: 20px;
+    font-family: "Comic Sans MS";
+}
+.text span {
+    font-family: text;
+    font-size: 30px;
+}
