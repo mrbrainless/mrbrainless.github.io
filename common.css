@@ -17,6 +17,7 @@ header {
 }
 .logo img {
     width: 100%;
+    height: auto;
 }
 nav {
     text-align: center;
