@@ -11,8 +11,10 @@ let gap = 10;
 let TEXT = ["S", "a", "g", "a", "r"];
 if(window.innerWidth<600){
     cvs.width = window.innerWidth;
+    cvs.height = window.innerWidth;
 } else {
     cvs.width = 600;
+    cvs.height = 600;
 }
 
 const image = new Image();
