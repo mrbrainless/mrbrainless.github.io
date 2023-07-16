@@ -62,7 +62,7 @@ class Particle {
 }
 const particles = [];
 const image = new Image();
-image.src = "images/kick-buttowski.png";
+image.src = "images/722211225030.jpg";
 function scan(){
     image.addEventListener('load', () => {
         ctx.drawImage(image, cvs.width/2-150, 0 , 300, 300);
