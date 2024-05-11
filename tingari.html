@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tingari</title>
+    <link rel="preload" href="KOMIKAX_.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="Heyam.ttf" as="font" crossorigin="anonymous" />
     <style>
         @font-face {
             font-family: myFont;
@@ -22,19 +24,21 @@
             box-sizing: border-box;
         }
 
+
         body {
-            overflow: hidden;
             height: 100vh;
+            overflow: hidden;
+            position: relative;
         }
 
         .container {
             width: 100%;
             height: 100%;
-            overflow: hidden;
-            position: relative;
             background: url(background.jpg);
             background-position: center;
             background-size: cover;
+            overflow: hidden;
+            position: relative;
         }
 
         .heart {
@@ -97,7 +101,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 32px;
+            font-size: 35px;
             text-shadow: 1px 1px #000;
             color: #fff;
             font-family: myFont2;
@@ -143,16 +147,11 @@
 
 <body>
     <div class="container"></div>
-    <canvas width="500" height="500"></canvas>
     <div class="text"></div>
     <script>
-        const cvs = document.querySelector('canvas');
         const container = document.querySelector('.container');
         const image = new Image();
         image.src = "love (2).png";
-        const ctx = cvs.getContext('2d');
-        cvs.width = window.innerWidth;
-        cvs.height = window.innerHeight;
         let text = "                               Hii Sweetheart...!    |        I wanna say something to you!      |         You are the most beautiful girl I have ever seen!      |         Your heart shines brighter than anyone else's.        |         I   ̶L̶o̶v̶e̶  Like You!         |    Happy Birthday Tingari!";
         let i = 0;
         const textInterval = setInterval(function () {
@@ -187,8 +186,6 @@
             container.appendChild(div);
         }
         animate()
-        let x = 0;
-        let y = cvs.height;
     </script>
 </body>
 
