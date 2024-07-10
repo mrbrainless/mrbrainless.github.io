@@ -46,3 +46,12 @@ main {
     font-size: 18px;
     border-radius: 24px;
 }
+
+@media (max-width:1000px) {
+    .container a {
+       margin: 12px;
+    }
+    .search {
+        width: 90%;
+    }
+}
