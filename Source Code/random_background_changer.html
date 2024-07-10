@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Color Changer</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="shortcut icon" href="../favicon.ico" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+    <!-- Description and Keywords -->
+    <meta name="description"
+        content="Easily change your website's background to a random color with this simple JavaScript code. Enhance user experience with dynamic backgrounds!" />
+    <meta name="keywords"
+        content="random background color, JavaScript background color, dynamic background, website color changer, JS color script, web design, JavaScript tutorial, coding tips, front-end development, mrbrainless">
+    <meta name="author" content="MrBrainLess">
+    <!-- Ads Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+        crossorigin="anonymous"></script>
+    <!-- Author -->
+    <meta property="og:site_name" content="MrBrainLess" />
+    <meta name="author" content="MrBrainLess">
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .ads {
+            width: 19%;
+        }
+
+        .container {
+            width: 60%;
+            margin: 0 16px;
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        .copy {
+            display: inline-block;
+            background: #123456;
+            color: #fff;
+            border: solid 2px #fff;
+            padding: 12px 16px;
+            border-radius: 16px;
+            cursor: pointer;
+            user-select: none;
+            margin: 16px 0;
+        }
+
+        .live-project {
+            display: inline-block;
+        }
+
+        .live-project a {
+            display: inline-block;
+            font-size: 20px;
+            background: #123456;
+            color: #fff;
+            margin: 16px 0;
+            padding: 12px 16px;
+            border-radius: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .explanation {
+            width: 60%;
+            margin: auto;
+            line-height: 1.4;
+            padding: 16px 2px;
+        }
+        .explanation p {
+            font-size: 18px;
+            margin: 16px 0;
+            padding: 16px;
+        }
+
+        .para {
+            background: #ddd;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.11), 0 2px 2px rgba(0,0,0,0.11), 0 4px 4px rgba(0,0,0,0.11), 0 8px 8px rgba(0,0,0,0.11), 0 16px 16px rgba(0,0,0,0.11), 0 32px 32px rgba(0,0,0,0.11);
+        }
+        .para {
+            margin: 0 0 20px 0;
+        }
+        .explanation h2 {
+            font-size: 32px;
+        }
+        .explanation h3 {
+            margin-top: 30px;
+            font-size: 22px;
+        }
+
+        .explanation a {
+            display: block;
+            margin: 18px;
+            background: #ddd;
+            padding: 12px 18px;
+            border-radius: 12px;
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            border: solid 2px;
+            font-weight: bold;
+        }
+
+        .explanation a:hover {
+            text-decoration: underline;
+            background: #26FF96;
+            color: #000;
+        }
+
+        @media (max-width: 1200px) {
+            .ads1 {
+                display: none;
+            }
+
+            .ads {
+                width: 25%;
+            }
+
+            .container {
+                width: 70%;
+            }
+            .explanation {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .ads1 {
+                display: none;
+            }
+
+            main {
+                flex-direction: column;
+                align-items: center;
+                padding: 2px;
+            }
+
+            .ads {
+                width: 95%;
+            }
+
+            .container {
+                width: 95%;
+                margin: 16px 0;
+            }
+            .explanation {
+                width: 95%;
+            }
+        }
+        @media (max-width: 720px) {
+            h1 {
+                font-size: 30px;
+            }
+            .explanation h2 {
+                font-size: 24px;
+            }
+            .explanation h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../mrbrainless.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <a href="../index.html" class="active">Home</a>
+            <a href="../about/">About</a>
+            <a href="facts/">Facts</a>
+        </nav>
+    </header>
+    <h1>Random Background Changer</h1>
+    <main>
+        <div class="ads ads1">
+            <span style="display: block;color: #666; text-align: center;">Ads</span>
+            <!-- Ad -->
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- Ad -->
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="container">
+            <div class="copy">Copy Code</div>
+            <div class="live-project"><a href="live-random-background-changer.html" target="_blank">Live Project</a>
+            </div>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Random Background Changer&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button {
+            background: #000;
+            font-size: 50px;
+            padding: 16px 24px;
+            border-radius: 24px;
+            color: #fff;
+            border: solid #000 4px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            cursor: pointer;
+            user-select: none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;button&quot;&gt;Change Color&lt;/div&gt;
+    &lt;script&gt;
+        const button = document.querySelector('.button');
+        const characters = ['a', 'b', 'c', 'd', 'e', 'f', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        button.addEventListener('click', () =&gt; {
+            let color = &quot;#&quot;;
+            for (let i = 0; i &lt; 6; i++) {
+                const randomNumber = Math.floor(Math.random() * characters.length);
+                color += characters[randomNumber];
+            }
+            document.body.style.background = color;
+        })
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+        </div>
+        <div class="ads ads2">
+            <span style="display: block;color: #666; text-align: center;">Ads</span>
+            <!-- Ad -->
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <div class="ads1">
+                <!-- Ad -->
+                <script async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                    crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                    data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+    </main>
+    <article>
+        <div class="explanation">
+            <h2>Breakdown of the code</h2>
+            <h3>1. HTML Document Structure</h3>
+                <div class="para">
+                    <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+                    <p>Declares the document type and version of HTML being used.</p>
+                </div>
+                <div class="para">
+                    <pre><code>&lt;html lang="en"&gt;:</code></pre>
+                    <p>The root element of the HTML document, with <strong>lang="en"</strong> indicating that the content is in English.</p>
+                </div>
+                <div class="para">
+                    <p><strong>&lt;head&gt;...&lt;/head&gt;:</strong> Contains meta-information about the document.</p>
+                </div>
+                <div class="para">
+                    <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+                    <p>Specifies the character encoding for the document as UTF-8.</p>
+                </div>
+                <div class="para">
+                    <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                    <p>Ensures the page is responsive and sets the viewport to match the device's width.</p>
+                </div>
+                <div class="para">
+                    <pre><code>&lt;title&gt;Random Background Changer&lt;title&gt;</code></pre>
+                    <p>Sets the title of the document shown in the browser tab.</p>
+                </div>
+                <div class="para">
+                    <p><strong>&lt;style&gt;...&lt;/style&gt;:</strong> Contains CSS to style the elements of the document.</p>
+                </div>
+                <div class="para">
+                    <p><strong>&lt;body&gt;...&lt;/body&gt;:</strong>  Contains the content of the document.</p>
+                </div>
+            <!-- Ad -->
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <h3>2. CSS Styling</h3>
+            <div class="para">
+                <pre><code>
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+                </code></pre>
+                <p>Resets default <strong>margin</strong> and <strong>padding</strong> for all elements and sets the <strong>box-sizing</strong> property to <strong>border-box</strong> for consistent sizing.</p>
+            </div>
+            <div class="para">
+                <pre><code>
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+                </code></pre>
+                <p>Ensures the body takes up at least the full height of the viewport and centers its content both vertically and horizontally.</p>
+            </div>
+            <div class="para">
+                <pre><code>
+.button {
+    background: #000;
+    font-size: 50px;
+    padding: 16px 24px;
+    border-radius: 24px;
+    color: #fff;
+    border: solid #000 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    user-select: none;
+}
+                </code></pre>
+                <p>Styles the button with a black background, large font size, padding, rounded corners, white text color, black border, specific font family, and sets the cursor to pointer and prevents text selection.</p>
+            </div>
+            <h3>3. HTML Content</h3>
+            <div class="para">
+                <pre><code>&lt;div class="button"&gt;Change Color&lt;/div&gt;</code></pre>
+                <p>A div element styled as a button with the text "Change Color".</p>
+            </div>
+            <!-- Ad -->
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <h3>4. JavaScript Functionality</h3>
+            <div class="para">
+                <p><strong>&lt;script&gt;...&lt;/script&gt;:</strong>  Contains JavaScript to add interactivity to the page.</p>
+            </div>
+            <div class="para">
+                <pre><code>const button = document.querySelector('.button');
+                </code></pre>
+                <p>Selects the button element using 'querySelector' and stores it in the 'button' variable.</p>
+            </div>
+            <div class="para">
+                <pre><code>const characters = ['a', 'b', 'c', 'd', 'e', 'f', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+                </code></pre>
+                <p>Defines an array of characters and numbers that will be used to generate random hex color codes.</p>
+            </div>
+            <div class="para">
+                <pre><code>
+button.addEventListener('click', () => {
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        const randomNumber = Math.floor(Math.random() * characters.length);
+        color += characters[randomNumber];
+    }
+    document.body.style.background = color;
+});                 
+                </code></pre>
+                <ul style="list-style-position: inside; padding: 16px; font-size: 18px; line-height: 1.6;">
+                    <li>Adds a click event listener to the button.</li>
+                    <li>When the button is clicked, the following happens:</li>
+                    <li>Initializes an empty string 'color' with the character '#' (indicating the start of a hex color code).</li>
+                    <li>A 'for' loop runs 6 times, each time generating a random number between 0 and the length of the 'characters' array.</li>
+                    <li>Appends the character at the index of the random number to the color string.</li>
+                    <li>After the loop, color will be a string representing a random hex color code (e.g., #1a2b3c).</li>
+                    <li>Sets the background property of the body element to this random color, changing the background color of the entire page.</li>
+                </ul>
+            </div>
+            <h2>Summary</h2>
+            <p>This HTML document creates a simple webpage with a button. When the button is clicked, the background color of the webpage changes to a randomly generated color. The CSS ensures the button is styled nicely and the content is centered. The JavaScript handles the generation of the random color and the application of that color to the background of the page.</p>
+            <h2>You might also like</h2>
+            <a href="digital_clock.html">Digital Clock</a>
+            <a href="stopwatch.html">Stopwatch</a>
+            <!-- Ad -->
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </article>
+    <footer>
+        <div class="mail">
+            <p><a href="mailto:sagarkumarmodu@gmail.com">sagarkumarmodu@gmail.com</a>
+            </p>
+            <p><a href="mailto:sagarkumarmodu2001@gmail.com">sagarkumarmodu2001@gmail.com</a></p>
+        </div>
+        <div class="copyright">&copy; <span class="year"></span> | Created and Designed by <a
+                href="../index.html">MrBrainLess</a></div>
+    </footer>
+    <script>
+        const copy = document.querySelector('.copy');
+        const code = document.querySelector('pre code');
+        copy.addEventListener('click', () => {
+            const text = code.innerText;
+            const textarea = document.createElement('textarea');
+            textarea.innerHTML = text;
+            textarea.select();
+            navigator.clipboard.writeText(textarea.value);
+            copy.innerText = "Copied";
+            copy.style.cssText = "background: #26FF96;color: #000; border: solid black 2px";
+            setTimeout(function () {
+                copy.innerText = "Copy Code";
+                copy.style.cssText = "background: #123456;color: #fff;border: solid 2px #fff;";
+            }, 2000)
+        })
+    </script>
+    <script src="../common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>
