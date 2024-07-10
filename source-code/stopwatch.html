@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="shortcut icon" href="../favicon.ico" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+    <!-- Description and Keywords -->
+    <meta name="description" content="A simple and interactive stopwatch web application with start, pause, and reset functionalities using HTML, CSS, and JavaScript.">
+    <meta name="keywords" content="stopwatch, timer, HTML, CSS, JavaScript, web app, mrbrainless">
+    <meta name="author" content="MrBrainLess">
+    <!-- Ads Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+        crossorigin="anonymous"></script>
+    <!-- Author -->
+    <meta property="og:site_name" content="MrBrainLess" />
+    <meta name="author" content="MrBrainLess">
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .ads {
+            width: 19%;
+        }
+
+        .container {
+            width: 60%;
+            margin: 0 16px;
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        .copy {
+            display: inline-block;
+            background: #123456;
+            color: #fff;
+            border: solid 2px #fff;
+            padding: 12px 16px;
+            border-radius: 16px;
+            cursor: pointer;
+            user-select: none;
+            margin: 16px 0;
+        }
+
+        .live-project {
+            display: inline-block;
+        }
+
+        .live-project a {
+            display: inline-block;
+            font-size: 20px;
+            background: #123456;
+            color: #fff;
+            margin: 16px 0;
+            padding: 12px 16px;
+            border-radius: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .explanation {
+            width: 60%;
+            margin: auto;
+            line-height: 1.4;
+            padding: 16px 2px;
+        }
+        .explanation p {
+            font-size: 18px;
+            padding:  8px 16px;
+        }
+
+        .para {
+            background: #ddd;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.11), 0 2px 2px rgba(0,0,0,0.11), 0 4px 4px rgba(0,0,0,0.11), 0 8px 8px rgba(0,0,0,0.11), 0 16px 16px rgba(0,0,0,0.11), 0 32px 32px rgba(0,0,0,0.11);
+            margin: 0 0 20px 0;
+        }
+        .explanation h2 {
+            font-size: 32px;
+        }
+        .explanation h3 {
+            margin-top: 30px;
+            font-size: 22px;
+        }
+
+        .explanation a {
+            display: block;
+            margin: 18px;
+            background: #ddd;
+            padding: 12px 18px;
+            border-radius: 12px;
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            border: solid 2px;
+            font-weight: bold;
+        }
+
+        .explanation a:hover {
+            text-decoration: underline;
+            background: #26FF96;
+            color: #000;
+        }
+
+        @media (max-width: 1200px) {
+            .ads1 {
+                display: none;
+            }
+
+            .ads {
+                width: 25%;
+            }
+
+            .container {
+                width: 70%;
+            }
+            .explanation {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .ads1 {
+                display: none;
+            }
+
+            main {
+                flex-direction: column;
+                align-items: center;
+                padding: 2px;
+            }
+
+            .ads {
+                width: 95%;
+            }
+
+            .container {
+                width: 95%;
+                margin: 16px 0;
+            }
+            .explanation {
+                width: 95%;
+            }
+        }
+        @media (max-width: 720px) {
+            h1 {
+                font-size: 30px;
+            }
+            .explanation h2 {
+                font-size: 24px;
+            }
+            .explanation h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../mrbrainless.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <a href="../index.html" class="active">Home</a>
+            <a href="../about/">About</a>
+            <a href="facts/">Facts</a>
+        </nav>
+    </header>
+    <h1>Random Background Changer</h1>
+    <main>
+        <div class="ads ads1">
+            <span style="display: block;color: #666; text-align: center;"></span>
+            <!-- Ad -->
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- Ad -->
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="container">
+            <div class="copy">Copy Code</div>
+            <div class="live-project"><a href="live-stopwatch.html" target="_blank">Live Project</a>
+            </div>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;StopWatch&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css&quot; integrity=&quot;sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot; /&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #111;
+            color: #fff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+        .time {
+            display: flex;
+            justify-content: center;
+        }
+        .number {
+            width: 80px;
+            height: 80px;
+            font-size: 60px;
+            margin: 0;
+            line-height: 80px;
+            text-align: center;
+        }
+        .minutes, .seconds {
+            color: #007FFF;
+        }
+        .colon {
+            height: 80px;
+            width: 20px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 70px;
+        }
+        .buttons {
+            display: flex;
+            font-size: 100px;
+            justify-content: center;
+            margin: 24px;
+        }
+        .buttons div {
+            width: 120px;
+            margin: 0 24px;
+            cursor: pointer;
+        }
+        .buttons div.reset {
+            pointer-events: none;
+            color: rgb(124, 117, 117);
+        }
+        .buttons div.active {
+            pointer-events: all;
+            color: white;
+        }
+        @media (max-width: 900px){
+            .buttons {
+                font-size: 80px;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;time&quot;&gt;
+            &lt;div class=&quot;number hours&quot;&gt;00&lt;/div&gt;
+            &lt;div class=&quot;colon&quot;&gt;:&lt;/div&gt;
+            &lt;div class=&quot; number minutes&quot;&gt;00&lt;/div&gt;
+            &lt;div class=&quot;colon&quot;&gt;:&lt;/div&gt;
+            &lt;div class=&quot;number seconds&quot;&gt;00&lt;/div&gt;
+            &lt;div class=&quot;colon&quot;&gt;:&lt;/div&gt;
+            &lt;div class=&quot;number centi-seconds&quot;&gt;00&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;buttons&quot;&gt;
+            &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;fa fa-play&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                &lt;!-- &lt;i class=&quot;fa fa-pause&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; --&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;reset&quot;&gt;&lt;i class=&quot;fa fa-repeat&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        const play = document.querySelector('.play');
+        const reset = document.querySelector('.reset');
+        const hours = document.querySelector('.hours');
+        const minutes = document.querySelector('.minutes');
+        const seconds = document.querySelector('.seconds');
+        const centiSeconds = document.querySelector('.centi-seconds');
+        let interval;
+        let count = 0;
+        let second = 0;
+        let minute = 0;
+        let hour = 0;
+        let timer = true;
+        let playValue = 'play';
+
+        play.addEventListener('click', () =&gt; {
+            if(timer){
+                play.innerHTML = '&lt;i class=&quot;fa fa-pause&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;';
+                interval = setInterval(stopWatch, 10);
+                timer = false;
+                reset.classList.remove('active');
+            } else {
+                clearInterval(interval);
+                timer = true;
+                play.innerHTML = '&lt;i class=&quot;fa fa-play&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;';
+                reset.classList.add('active');
+            }
+        })
+
+        reset.addEventListener('click', () =&gt; {
+            if (!timer) {
+                return;
+            }
+            clearInterval(interval);
+            count = 0;
+            second = 0;
+            minute = 0;
+            hour = 0;
+            centiSeconds.innerHTML = '00';
+            seconds.innerHTML = '00';
+            minutes.innerHTML = '00';
+            hours.innerHTML = '00';
+        })
+        function stopWatch(){
+            count++;
+            if(count == 100){
+                second++;
+                count = 0;
+            }
+            if(second == 60){
+                minute++;
+                second = 0;
+            }
+            if(minute == 60){
+                hour++;
+                minute = 0;
+                second = 0;
+            }
+            centiSeconds.innerHTML = count &lt; 10 ? &quot;0&quot; + count : count;
+            seconds.innerHTML = second &lt; 10 ? &quot;0&quot; + second : second;
+            minutes.innerHTML = minute &lt; 10 ? &quot;0&quot; + minute : minute;
+            hours.innerHTML = hour &lt; 10 ? &quot;0&quot; + hour : hour;
+        }
+                
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;               
+</code></pre>
+        </div>
+        <div class="ads ads2">
+            <span style="display: block;color: #666; text-align: center;"></span>
+            <!-- Ad -->
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <div class="ads1">
+                <!-- Ad -->
+                <script async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                    crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                    data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+    </main>
+    <article>
+        <div class="explanation">
+            <h2>Breakdown of the code</h2>
+            <h3>1. HTML Document Structure</h3>
+                <div class="para">
+                    <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+                    <p>Declares the document type and version of HTML being used.</p>
+                </div>
+                <div class="para">
+                    <pre><code>&lt;html lang="en"&gt;:</code></pre>
+                    <p>The root element of the HTML document, with <strong>lang="en"</strong> indicating that the content is in English.</p>
+                </div>
+                <div class="para">
+                    <p><strong>&lt;head&gt;...&lt;/head&gt;:</strong> Contains meta-information about the document.</p>
+                </div>
+                <div class="para">
+                    <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+                    <p>Specifies the character encoding for the document as UTF-8.</p>
+                </div>
+                <div class="para">
+                    <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                    <p>Ensures the page is responsive and sets the viewport to match the device's width.</p>
+                </div>
+                <div class="para">
+                    <pre><code>&lt;title&gt;StopWatch&lt;title&gt;</code></pre>
+                    <p>Sets the title of the document shown in the browser tab.</p>
+                </div>
+                <div class="para">
+                    <pre><code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" ...&gt;</code></pre>
+                    <p> Includes Font Awesome icons.</p>
+                </div>
+                <div class="para">
+                    <p><strong>&lt;style&gt;...&lt;/style&gt;:</strong> Contains CSS to style the elements of the document.</p>
+                </div>
+                <div class="para">
+                    <p><strong>&lt;body&gt;...&lt;/body&gt;:</strong>  Contains the content of the document.</p>
+                </div>
+            <!-- Ad -->
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <h3>2. CSS Styling</h3>
+            <div class="para">
+                <pre><code>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+}
+
+.number {
+    width: 80px;
+    height: 80px;
+    font-size: 60px;
+    margin: 0;
+    line-height: 80px;
+    text-align: center;
+}
+
+.minutes, .seconds {
+    color: #007FFF;
+}
+
+.colon {
+    height: 80px;
+    width: 20px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.buttons {
+    display: flex;
+    font-size: 100px;
+    justify-content: center;
+    margin: 24px;
+}
+
+.buttons div {
+    width: 120px;
+    margin: 0 24px;
+    cursor: pointer;
+}
+
+.buttons div.reset {
+    pointer-events: none;
+    color: rgb(124, 117, 117);
+}
+
+.buttons div.active {
+    pointer-events: all;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .buttons {
+        font-size: 80px;
+    }
+}                   
+                </code></pre>
+                <ul style="list-style-position: inside; padding: 16px; font-size: 18px; line-height: 1.6;">
+                    <li><strong>Resetting Default Styles:</strong> ensures no default margins or padding and uses the border-box model for sizing.</li>
+                    <li><strong>Body Styles:</strong> The body is styled to center its content vertically and horizontally, set a background color, and use a specific font.</li>
+                    <li><strong>Container:</strong> Centers the content within the container and sets its width to 90%.</li>
+                    <li><strong>Time:</strong> Uses flexbox to center the time display horizontally.</li>
+                    <li><strong>Number:</strong> Sets the size and alignment for the time numbers.</li>
+                    <li><strong>Minutes and Seconds:</strong> Changes the color of the minutes and seconds to blue.</li>
+                    <li><strong>Colon:</strong> Styles the colons between the time units.</li>
+                    <li><strong>Buttons:</strong> Uses flexbox to center the buttons, sets their size, and adds spacing.</li>
+                    <li><strong>Reset Button:</strong> Initially, disables pointer events and sets its color to grey.</li>
+                    <li><strong>Active Button:</strong> Enables pointer events and sets the color to white.</li>
+                    <li><strong>Media Query:</strong> Adjusts the button size for screens smaller than 900px.</li>
+                </ul>
+            </div>
+            <h3>3. HTML Content</h3>
+            <div class="para">
+                <ul style="list-style-position: inside; padding: 16px; font-size: 18px; line-height: 1.6;">
+                    <li><strong>&lt;div class="container"&gt;</strong> is a wrapper for the content.</li>
+                    <li><strong>&lt;div class="time"&gt;</strong> contains the stopwatch display.</li>
+                    <li><strong>&lt;div class="buttons"&gt;</strong> contains the play/pause and reset buttons.</li>
+                </ul>
+            </div>
+            <!-- Ad -->
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <h3>4. JavaScript Functionality</h3>
+            <div class="para">
+                <p><strong>&lt;script&gt;...&lt;/script&gt;:</strong>  Contains JavaScript to add interactivity to the page.</p>
+            </div>
+            <div class="para">
+                <pre><code>const play = document.querySelector('.play');
+const reset = document.querySelector('.reset');
+const hours = document.querySelector('.hours');
+const minutes = document.querySelector('.minutes');
+const seconds = document.querySelector('.seconds');
+const centiSeconds = document.querySelector('.centi-seconds');
+let interval;
+let count = 0;
+let second = 0;
+let minute = 0;
+let hour = 0;
+let timer = true;
+
+play.addEventListener('click', () => {
+    if(timer){
+        play.innerHTML = '&lt;i class="fa fa-pause" aria-hidden="true"&gt;&lt;/i&gt;';
+        interval = setInterval(stopWatch, 10);
+        timer = false;
+        reset.classList.remove('active');
+    } else {
+        clearInterval(interval);
+        timer = true;
+        play.innerHTML = '&lt;i class="fa fa-play" aria-hidden="true"&gt;&lt;/i&gt;';
+        reset.classList.add('active');
+    }
+});
+
+reset.addEventListener('click', () => {
+    if (!timer) {
+        return;
+    }
+    clearInterval(interval);
+    count = 0;
+    second = 0;
+    minute = 0;
+    hour = 0;
+    centiSeconds.innerHTML = '00';
+    seconds.innerHTML = '00';
+    minutes.innerHTML = '00';
+    hours.innerHTML = '00';
+});
+
+function stopWatch(){
+    count++;
+    if(count == 100){
+        second++;
+        count = 0;
+    }
+    if(second == 60){
+        minute++;
+        second = 0;
+    }
+    if(minute == 60){
+        hour++;
+        minute = 0;
+    }
+    centiSeconds.innerHTML = count &lt; 10 ? "0" + count : count;
+    seconds.innerHTML = second &lt; 10 ? "0" + second : second;
+    minutes.innerHTML = minute &lt; 10 ? "0" + minute : minute;
+    hours.innerHTML = hour &lt; 10 ? "0" + hour : hour;
+}              
+                </code></pre>
+                <p><strong>1. Selecting Elements:</strong> 'document.querySelector' is used to select the play, reset buttons, and time display elements.</p>
+                <p><strong>2. Variables:</strong> Initializes variables for the interval, counts for centiSeconds, seconds, minutes, hours, and a timer state.</p>
+                <p><strong>3. Play Button Event Listener:</strong></p>
+                <ul style="list-style-position: inside; padding: 16px; font-size: 18px; line-height: 1.6;">
+                    <li>When clicked, it toggles between starting and pausing the stopwatch.</li>
+                    <li>If the timer is true (paused), it changes the button to a pause icon, starts the interval to call stopWatch every 10 milliseconds, and disables the reset button.</li>
+                    <li>If the timer is false (running), it stops the interval, changes the button to a play icon, and enables the reset button.</li>
+                </ul>
+                <p><strong>4. Reset Button Event Listener:</strong></p>
+                <ul style="list-style-position: inside; padding: 16px; font-size: 18px; line-height: 1.6;">
+                    <li>When clicked, it resets the time only if the timer is paused.</li>
+                    <li>Stops the interval, resets all counts to 0, and updates the display to '00'.</li>
+                </ul>
+                <p><strong>5. stopWatch Function:</strong></p>
+                <ul style="list-style-position: inside; padding: 16px; font-size: 18px; line-height: 1.6;">
+                    <li>Increments the centi-seconds count.</li>
+                    <li>If centi-seconds reach 100, it resets to 0 and increments the seconds count.</li>
+                    <li>If seconds reach 60, it resets to 0 and increments the minutes count.</li>
+                    <li>If minutes reach 60, it resets to 0 and increments the hours count.</li>
+                    <li>Updates the display to show the current counts, ensuring two digits for each unit by adding a leading zero if necessary.</li>
+                </ul>
+            </div>
+            <h2>You might also like</h2>
+            <a href="digital_clock.html">Digital Clock</a>
+            <a href="random_background_changer.html">Stopwatch</a>
+            <!-- Ad -->
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5082315880457032"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5082315880457032"
+                data-ad-slot="3567549267" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </article>
+    <footer>
+        <div class="mail">
+            <p><a href="mailto:sagarkumarmodu@gmail.com">sagarkumarmodu@gmail.com</a>
+            </p>
+            <p><a href="mailto:sagarkumarmodu2001@gmail.com">sagarkumarmodu2001@gmail.com</a></p>
+        </div>
+        <div class="copyright">&copy; <span class="year"></span> | Created and Designed by <a
+                href="../index.html">MrBrainLess</a></div>
+    </footer>
+    <script>
+        const copy = document.querySelector('.copy');
+        const code = document.querySelector('pre code');
+        copy.addEventListener('click', () => {
+            const text = code.innerText;
+            const textarea = document.createElement('textarea');
+            textarea.innerHTML = text;
+            textarea.select();
+            navigator.clipboard.writeText(textarea.value);
+            copy.innerText = "Copied";
+            copy.style.cssText = "background: #26FF96;color: #000; border: solid black 2px";
+            setTimeout(function () {
+                copy.innerText = "Copy Code";
+                copy.style.cssText = "background: #123456;color: #fff;border: solid 2px #fff;";
+            }, 2000)
+        })
+    </script>
+    <script src="../common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>
