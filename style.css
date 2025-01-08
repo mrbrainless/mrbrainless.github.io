@@ -18,6 +18,9 @@ main {
   border-bottom: solid #fc0 2px;
   padding-bottom: 30px;
 }
+.news {
+  border-bottom: none;
+}
 .articles {
   border: none;
 }
