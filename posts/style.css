@@ -19,6 +19,9 @@
   --font-body: "Segoe UI", "Roboto", sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+}
 body {
   margin: 0;
   padding: 0;
@@ -26,7 +29,7 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.7;
-  font-size: 17px;
+  font-size: 1.7rem;
 }
 
 header {
@@ -35,7 +38,7 @@ header {
   justify-content: space-between;
   background: var(--color-header-bg);
   color: var(--color-light-text);
-  padding: 1rem 2rem;
+  padding: 1.6rem 3.2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
@@ -43,7 +46,7 @@ header {
 }
 
 .logo img {
-  height: 48px;
+  height: 4.8rem;
   transition: transform 0.3s ease;
 }
 
@@ -53,16 +56,16 @@ header {
 
 nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 2.4rem;
 }
 
 nav a {
   text-decoration: none;
   font-weight: 500;
   color: var(--color-light-text);
-  font-size: 1rem;
+  font-size: 1.6rem;
   position: relative;
-  padding: 0.25rem 0;
+  padding: 0.4rem 0;
 }
 
 nav a::after {
@@ -82,25 +85,26 @@ nav a:hover::after {
 
 nav a:hover {
   color: var(--color-hover-accent);
+  text-decoration: none;
 }
 
 .page-wrapper {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 1rem;
+  padding: 0 1.6rem;
 }
 
 .container {
-  max-width: 780px;
+  max-width: 78rem;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 3.2rem 1.6rem;
 }
 
 .article-image {
   display: block;
   width: 100%;
-  margin: 2rem 0;
+  margin: 3.2rem 0;
   padding: 0;
 }
 
@@ -109,20 +113,20 @@ nav a:hover {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 1.2rem;
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .article-image img:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 0.6rem 2.4rem rgba(0, 0, 0, 0.18);
 }
 
 .article-image figcaption {
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   color: var(--color-muted);
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   text-align: center;
   max-width: 90%;
   margin-left: auto;
@@ -138,22 +142,22 @@ h3 {
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 3.2rem;
+  margin-bottom: 0.8rem;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
+  font-size: 2.4rem;
+  margin-top: 3.2rem;
 }
 
 h3 {
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
+  font-size: 1.92rem;
+  margin-top: 2.4rem;
 }
 
 p {
-  margin: 1rem 0;
+  margin: 1.6rem 0;
 }
 
 a {
@@ -165,16 +169,21 @@ a:hover {
 }
 
 blockquote {
-  border-left: 4px solid var(--color-blockquote-accent);
-  padding-left: 1rem;
+  border-left: 0.4rem solid var(--color-blockquote-accent);
+  padding-left: 1.6rem;
   color: var(--color-muted);
   font-style: italic;
 }
 
+.table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+}
 .summary-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 2rem 0;
+  margin: 3.2rem 0;
   background: #fff;
   border: 1px solid #ddd;
 }
@@ -182,7 +191,7 @@ blockquote {
 .summary-table th,
 .summary-table td {
   border: 1px solid #ddd;
-  padding: 0.75rem;
+  padding: 1.2rem;
   text-align: left;
 }
 
@@ -192,38 +201,42 @@ blockquote {
 
 .fun-fact {
   background: var(--color-fun-fact-bg);
-  padding: 1rem;
-  border-left: 5px solid var(--color-accent);
-  margin: 1.5rem 0;
-  border-radius: 6px;
+  padding: 1.6rem;
+  border-left: 0.5rem solid var(--color-accent);
+  margin: 2.4rem 0;
+  border-radius: 0.6rem;
 }
 
+ul {
+  list-style-position: inside;
+}
 .related-articles ul {
-  margin-top: 1rem;
-  padding-left: 1.2rem;
+  margin-top: 1.6rem;
+  padding-left: 1.92rem;
+  list-style-position: inside;
 }
 
 footer {
   background: var(--color-header-bg);
   color: var(--color-soft-slate);
-  padding: 2rem;
+  padding: 3.2rem;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 1.52rem;
   border-top: 1px solid var(--color-border-slate);
 }
 
 .footer-content {
-  max-width: 800px;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
 .footer-links {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
 }
 
 .footer-links a {
   color: var(--color-link-blue);
-  margin: 0 0.4rem;
+  margin: 0 0.64rem;
   font-weight: 500;
 }
 
@@ -238,64 +251,131 @@ footer {
 
 .ad-inline,
 .ad-box {
-  margin: 2rem 0;
+  margin: 3.2rem 0;
   text-align: center;
 }
 
 .ad-box {
   position: relative;
   background: var(--color-bg);
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 0.8rem;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.05);
   overflow: hidden;
   min-height: 0 !important;
   height: auto;
 }
 
-.adsbygoogle:empty {
+.ad-box .adsbygoogle:empty {
   display: none !important;
+  margin: 0;
 }
 
 .ad-left,
 .ad-right {
-  flex: 0 0 160px;
-  margin: 2rem 1rem;
+  flex: 0 0 16rem;
+  margin: 3.2rem 1.6rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 102.4em) {
   .ad-left,
   .ad-right {
     display: none;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 60em) {
+  html {
+    font-size: 60%;
+  }
+  nav a {
+    font-size: 1.7rem;
+  }
+  .page-wrapper {
+    /* width: 100%; */
+    padding: 1.6rem;
+  }
+  .container {
+    width: 100%;
+    padding: 0;
+  }
   h1 {
-    font-size: 1.75rem;
+    font-size: 2.8rem;
   }
 
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.9rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
   }
 
   header {
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 1.6rem;
   }
 
   nav {
     justify-content: center;
     width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
   }
 
   nav a {
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
   }
 
   .ad-box {
-    padding: 0.75rem;
-    font-size: 0.85rem;
+    font-size: 1.36rem;
+  }
+  .related-articles ul,
+  ul {
+    padding-inline-start: 1rem;
+  }
+}
+
+@media (max-width: 30em) {
+  h1 {
+    font-size: 2.6rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  .page-wrapper {
+    padding: 1rem;
+  }
+  footer {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 24em) {
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 22.5em) {
+  body {
+    font-size: 1.68rem;
+  }
+  h1 {
+    font-size: 2.1rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.7rem;
   }
 }
