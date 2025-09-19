@@ -7,7 +7,7 @@ const ctx = cvs.getContext('2d', {
     willReadFrequently: true
 });
 let textIndex = 0;
-let gap = 10;
+let gap = 6;
 let TEXT = ["S", "a", "g", "a", "r"];
 if(window.innerWidth<600){
     cvs.width = window.innerWidth;
@@ -116,3 +116,4 @@ for(let i=0;i<2;i++){
         link.click();
     })
 }
+
