@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.clockception {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  transform: scale(0.8);
+}
+
+.hoursContainer,
+.minutesContainer,
+.secondsContainer {
+  display: flex;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-items: center;
+  gap: 0.3rem;
+}
+
+.clockContainer {
+  width: 11.5rem;
+  height: 11.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 10rem;
+  height: 10rem;
+  background: #fff;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 50%;
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.hour,
+.second {
+  width: 1.2rem;
+  height: 5rem;
+  background: black;
+  position: absolute;
+  left: calc(50% - 0.6rem);
+  top: calc(50% - 4.5rem);
+  transform-origin: 50% 90%;
+  border-radius: 0 0 10rem 10rem;
+  transform: rotate(45deg);
+  z-index: 1;
+  transition: 1s ease-out;
+}
+
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.dots div {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: #000;
+}
