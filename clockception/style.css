@@ -16,6 +16,7 @@ body {
 }
 
 .clockception {
+  width:100%;
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -87,3 +88,4 @@ body {
   border-radius: 50%;
   background: #000;
 }
+
