@@ -68,6 +68,7 @@ function scanImage(ctx, cvs){
             const alpha = scannedData[index+3]/255;
             const color = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
             if(alpha>0){
+                ctx.globalCompositeOperation = "source-over";
                 ctx.fillStyle = color;
                 ctx.textAlign = "left";
                 ctx.font = gap + 'px Arial';
@@ -116,5 +117,6 @@ for(let i=0;i<2;i++){
         link.click();
     })
 }
+
 
 
