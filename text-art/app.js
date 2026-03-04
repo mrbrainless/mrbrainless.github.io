@@ -65,7 +65,7 @@ function scanImage(ctx, cvs){
             const red = scannedData[index];
             const green = scannedData[index+1];
             const blue = scannedData[index+2];
-            const alpha = scannedData[index+3];
+            const alpha = scannedData[index+3]/255;
             const color = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
             if(alpha>0){
                 ctx.fillStyle = color;
@@ -116,4 +116,5 @@ for(let i=0;i<2;i++){
         link.click();
     })
 }
+
 
